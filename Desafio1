@@ -1,0 +1,54 @@
+local monsterName = "Blégadas"
+local description = "Um elfo esquisito com uma risada perigosa."
+local sound = "HumhumhumAhAh"
+local emoji = "🎤"
+local music = "Ivete Sangalo"
+local item = "Microfone"
+-- attributes {
+local attack = 10
+local defense = 5
+local vitality = 8
+local velocity = 10
+local inteliggence = 4
+
+---- skills
+local furtivity = 2
+local laughter = 10
+local sing = 7
+
+local function getProgressBar(attribute)
+	local fullBar = "█"
+	local emptyBar = ""
+	
+	local result = ""
+		for i = 1, 10, 1 do
+		if i <= attribute then
+			result = result..fullBar
+		else
+			result = result..emptyBar
+		end
+	end
+	return result
+end
+
+print("==================================================")
+print("I Características")
+print("I Nome:            "..monsterName)
+print("I História:        "..description)
+print("I Som:             "..sound)
+print("I Emoji Favorito:  "..emoji)
+print("I Item:            "..item)
+print("I Música Favorita: "..music)
+print("-------------------------------------------------- ")
+print("I Atributos")
+print("I Ataque:        ".. getProgressBar(attack))
+print("I Defesa:        ".. getProgressBar(defense))
+print("I Vida:          ".. getProgressBar(vitality))
+print("I Velocidade:    ".. getProgressBar(velocity))
+print("I Inteligência:  ".. getProgressBar(inteliggence))
+print("-------------------------------------------------- ")
+print("I Habilidades")
+print("I Furtividade:   ".. getProgressBar(furtivity))
+print("I Risadola:      ".. getProgressBar(laughter))
+print("I Cantar:        ".. getProgressBar(sing))
+print("==================================================")
